@@ -1,0 +1,122 @@
+// variables
+
+$backgroundDark: hsl(217, 19%, 24%);
+$backgroundLight: hsl(217, 19%, 32%);
+$textCol: hsl(193, 38%, 86%);
+$neonCol: hsl(150, 100%, 66%);
+
+// basics and resets
+
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+// layout
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding: 30px 0 50px;
+    max-width: 550px;
+    gap: 10px;
+    border-radius: 8px;
+    &__separator {
+        max-height: 20px;
+        padding: 0 10%;
+    }
+    &__dice-frame {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-30px);
+    }
+}
+
+// colours 
+
+body {
+    background-color: $backgroundDark;
+}
+
+.wrapper {
+    background-color: $backgroundLight;
+    &__advice {
+        color: $textCol;
+    }
+    &__dice-frame {
+        background-color: $neonCol;
+    }
+    &__advice-count {
+        color: $neonCol;
+    }
+}
+
+// components
+
+.wrapper__dice-frame {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 0px 24px 3px rgba(82, 255, 166, 1);
+    }
+}
+
+.wrapper__separator--desktop {
+    display: none;
+}
+
+.wrapper__separator--mobile {
+    display: inline;
+}
+
+// typography 
+
+body {
+    font-family: 'Manrope';
+    text-align: center;
+}
+
+.wrapper__advice-count {
+    text-transform: uppercase;
+    font-size: 0.75em;
+}
+
+.wrapper__advice {
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        &__separator--desktop {
+            display: inline;
+        }
+        &__separator--mobile {
+            display: none;
+        }
+    }
+
+}

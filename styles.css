@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90vw;
+  padding: 30px 0 50px;
+  max-width: 550px;
+  gap: 10px;
+  border-radius: 8px;
+}
+
+.wrapper__separator {
+  max-height: 20px;
+  padding: 0 10%;
+}
+
+.wrapper__dice-frame {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+body {
+  background-color: #323a49;
+}
+
+.wrapper {
+  background-color: #424e61;
+}
+
+.wrapper__advice {
+  color: #cee3e9;
+}
+
+.wrapper__dice-frame {
+  background-color: #52ffa8;
+}
+
+.wrapper__advice-count {
+  color: #52ffa8;
+}
+
+.wrapper__dice-frame {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.wrapper__dice-frame:hover {
+  -webkit-box-shadow: 0px 0px 24px 3px #52ffa6;
+          box-shadow: 0px 0px 24px 3px #52ffa6;
+}
+
+.wrapper__separator--desktop {
+  display: none;
+}
+
+.wrapper__separator--mobile {
+  display: inline;
+}
+
+body {
+  font-family: 'Manrope';
+  text-align: center;
+}
+
+.wrapper__advice-count {
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.wrapper__advice {
+  font-size: 20px;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper__separator--desktop {
+    display: inline;
+  }
+  .wrapper__separator--mobile {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
